@@ -13,6 +13,27 @@
 		DD802D6C1E8F3F78008132CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD802D6A1E8F3F78008132CF /* Main.storyboard */; };
 		DD802D6E1E8F3F78008132CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD802D6D1E8F3F78008132CF /* Assets.xcassets */; };
 		DD802D711E8F3F78008132CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD802D6F1E8F3F78008132CF /* LaunchScreen.storyboard */; };
+		DD802DA51E8F4068008132CF /* DNAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D7A1E8F4068008132CF /* DNAlbumTableViewController.m */; };
+		DD802DA71E8F4068008132CF /* DNImageFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D7E1E8F4068008132CF /* DNImageFlowViewController.m */; };
+		DD802DA81E8F4068008132CF /* DNImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D801E8F4068008132CF /* DNImagePickerController.m */; };
+		DD802DA91E8F4068008132CF /* DNImagePickerController.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD802D811E8F4068008132CF /* DNImagePickerController.strings */; };
+		DD802DAA1E8F4068008132CF /* DNPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D831E8F4068008132CF /* DNPhotoBrowser.m */; };
+		DD802DAB1E8F4068008132CF /* DNImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD802D841E8F4068008132CF /* DNImagePicker.strings */; };
+		DD802DAC1E8F4068008132CF /* NSURL+DNIMagePickerUrlEqual.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D881E8F4068008132CF /* NSURL+DNIMagePickerUrlEqual.m */; };
+		DD802DAD1E8F4068008132CF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D8A1E8F4068008132CF /* UIColor+Hex.m */; };
+		DD802DAE1E8F4068008132CF /* UIView+DNImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D8C1E8F4068008132CF /* UIView+DNImagePicker.m */; };
+		DD802DAF1E8F4068008132CF /* UIViewController+DNImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D8E1E8F4068008132CF /* UIViewController+DNImagePicker.m */; };
+		DD802DB01E8F4068008132CF /* imageResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD802D8F1E8F4068008132CF /* imageResources.xcassets */; };
+		DD802DB11E8F4068008132CF /* ImagesPicker.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD802D901E8F4068008132CF /* ImagesPicker.xcassets */; };
+		DD802DB31E8F4068008132CF /* DNAssetsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D951E8F4068008132CF /* DNAssetsViewCell.m */; };
+		DD802DB41E8F4068008132CF /* DNBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D971E8F4068008132CF /* DNBadgeLabel.m */; };
+		DD802DB51E8F4068008132CF /* DNBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D991E8F4068008132CF /* DNBrowserCell.m */; };
+		DD802DB61E8F4068008132CF /* DNFullImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D9B1E8F4068008132CF /* DNFullImageButton.m */; };
+		DD802DB71E8F4068008132CF /* DNSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D9D1E8F4068008132CF /* DNSendButton.m */; };
+		DD802DB81E8F4068008132CF /* DNUnAuthorizedTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802D9F1E8F4068008132CF /* DNUnAuthorizedTipsView.m */; };
+		DD802DB91E8F4068008132CF /* JKPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802DA11E8F4068008132CF /* JKPromptView.m */; };
+		DD802DBA1E8F4068008132CF /* MWTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802DA31E8F4068008132CF /* MWTapDetectingImageView.m */; };
+		DD802DBD1E8F4124008132CF /* XDImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802DBC1E8F4124008132CF /* XDImagePickerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +47,45 @@
 		DD802D6D1E8F3F78008132CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD802D701E8F3F78008132CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD802D721E8F3F78008132CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD802D791E8F4068008132CF /* DNAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNAlbumTableViewController.h; sourceTree = "<group>"; };
+		DD802D7A1E8F4068008132CF /* DNAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNAlbumTableViewController.m; sourceTree = "<group>"; };
+		DD802D7D1E8F4068008132CF /* DNImageFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNImageFlowViewController.h; sourceTree = "<group>"; };
+		DD802D7E1E8F4068008132CF /* DNImageFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNImageFlowViewController.m; sourceTree = "<group>"; };
+		DD802D7F1E8F4068008132CF /* DNImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNImagePickerController.h; sourceTree = "<group>"; };
+		DD802D801E8F4068008132CF /* DNImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNImagePickerController.m; sourceTree = "<group>"; };
+		DD802D811E8F4068008132CF /* DNImagePickerController.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = DNImagePickerController.strings; sourceTree = "<group>"; };
+		DD802D821E8F4068008132CF /* DNPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNPhotoBrowser.h; sourceTree = "<group>"; };
+		DD802D831E8F4068008132CF /* DNPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNPhotoBrowser.m; sourceTree = "<group>"; };
+		DD802D851E8F4068008132CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DNImagePicker.strings; sourceTree = "<group>"; };
+		DD802D871E8F4068008132CF /* NSURL+DNIMagePickerUrlEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+DNIMagePickerUrlEqual.h"; sourceTree = "<group>"; };
+		DD802D881E8F4068008132CF /* NSURL+DNIMagePickerUrlEqual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+DNIMagePickerUrlEqual.m"; sourceTree = "<group>"; };
+		DD802D891E8F4068008132CF /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		DD802D8A1E8F4068008132CF /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		DD802D8B1E8F4068008132CF /* UIView+DNImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DNImagePicker.h"; sourceTree = "<group>"; };
+		DD802D8C1E8F4068008132CF /* UIView+DNImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DNImagePicker.m"; sourceTree = "<group>"; };
+		DD802D8D1E8F4068008132CF /* UIViewController+DNImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DNImagePicker.h"; sourceTree = "<group>"; };
+		DD802D8E1E8F4068008132CF /* UIViewController+DNImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DNImagePicker.m"; sourceTree = "<group>"; };
+		DD802D8F1E8F4068008132CF /* imageResources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imageResources.xcassets; sourceTree = "<group>"; };
+		DD802D901E8F4068008132CF /* ImagesPicker.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImagesPicker.xcassets; sourceTree = "<group>"; };
+		DD802D941E8F4068008132CF /* DNAssetsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNAssetsViewCell.h; sourceTree = "<group>"; };
+		DD802D951E8F4068008132CF /* DNAssetsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNAssetsViewCell.m; sourceTree = "<group>"; };
+		DD802D961E8F4068008132CF /* DNBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNBadgeLabel.h; sourceTree = "<group>"; };
+		DD802D971E8F4068008132CF /* DNBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNBadgeLabel.m; sourceTree = "<group>"; };
+		DD802D981E8F4068008132CF /* DNBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNBrowserCell.h; sourceTree = "<group>"; };
+		DD802D991E8F4068008132CF /* DNBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNBrowserCell.m; sourceTree = "<group>"; };
+		DD802D9A1E8F4068008132CF /* DNFullImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNFullImageButton.h; sourceTree = "<group>"; };
+		DD802D9B1E8F4068008132CF /* DNFullImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNFullImageButton.m; sourceTree = "<group>"; };
+		DD802D9C1E8F4068008132CF /* DNSendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNSendButton.h; sourceTree = "<group>"; };
+		DD802D9D1E8F4068008132CF /* DNSendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNSendButton.m; sourceTree = "<group>"; };
+		DD802D9E1E8F4068008132CF /* DNUnAuthorizedTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNUnAuthorizedTipsView.h; sourceTree = "<group>"; };
+		DD802D9F1E8F4068008132CF /* DNUnAuthorizedTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNUnAuthorizedTipsView.m; sourceTree = "<group>"; };
+		DD802DA01E8F4068008132CF /* JKPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPromptView.h; sourceTree = "<group>"; };
+		DD802DA11E8F4068008132CF /* JKPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPromptView.m; sourceTree = "<group>"; };
+		DD802DA21E8F4068008132CF /* MWTapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTapDetectingImageView.h; sourceTree = "<group>"; };
+		DD802DA31E8F4068008132CF /* MWTapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTapDetectingImageView.m; sourceTree = "<group>"; };
+		DD802DA41E8F4068008132CF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DNImagePicker.strings"; sourceTree = "<group>"; };
+		DD802DBB1E8F4124008132CF /* XDImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDImagePickerManager.h; sourceTree = "<group>"; };
+		DD802DBC1E8F4124008132CF /* XDImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDImagePickerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +118,7 @@
 		DD802D601E8F3F78008132CF /* XDImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				DD802D781E8F4068008132CF /* DNImagePicker */,
 				DD802D641E8F3F78008132CF /* AppDelegate.h */,
 				DD802D651E8F3F78008132CF /* AppDelegate.m */,
 				DD802D671E8F3F78008132CF /* ViewController.h */,
@@ -77,6 +138,67 @@
 				DD802D621E8F3F78008132CF /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD802D781E8F4068008132CF /* DNImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				DD802D791E8F4068008132CF /* DNAlbumTableViewController.h */,
+				DD802D7A1E8F4068008132CF /* DNAlbumTableViewController.m */,
+				DD802D7D1E8F4068008132CF /* DNImageFlowViewController.h */,
+				DD802D7E1E8F4068008132CF /* DNImageFlowViewController.m */,
+				DD802D7F1E8F4068008132CF /* DNImagePickerController.h */,
+				DD802D801E8F4068008132CF /* DNImagePickerController.m */,
+				DD802D811E8F4068008132CF /* DNImagePickerController.strings */,
+				DD802D821E8F4068008132CF /* DNPhotoBrowser.h */,
+				DD802D831E8F4068008132CF /* DNPhotoBrowser.m */,
+				DD802D841E8F4068008132CF /* DNImagePicker.strings */,
+				DD802D861E8F4068008132CF /* Extensions */,
+				DD802D8F1E8F4068008132CF /* imageResources.xcassets */,
+				DD802D901E8F4068008132CF /* ImagesPicker.xcassets */,
+				DD802D931E8F4068008132CF /* Views */,
+				DD802DBB1E8F4124008132CF /* XDImagePickerManager.h */,
+				DD802DBC1E8F4124008132CF /* XDImagePickerManager.m */,
+			);
+			path = DNImagePicker;
+			sourceTree = "<group>";
+		};
+		DD802D861E8F4068008132CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD802D871E8F4068008132CF /* NSURL+DNIMagePickerUrlEqual.h */,
+				DD802D881E8F4068008132CF /* NSURL+DNIMagePickerUrlEqual.m */,
+				DD802D891E8F4068008132CF /* UIColor+Hex.h */,
+				DD802D8A1E8F4068008132CF /* UIColor+Hex.m */,
+				DD802D8B1E8F4068008132CF /* UIView+DNImagePicker.h */,
+				DD802D8C1E8F4068008132CF /* UIView+DNImagePicker.m */,
+				DD802D8D1E8F4068008132CF /* UIViewController+DNImagePicker.h */,
+				DD802D8E1E8F4068008132CF /* UIViewController+DNImagePicker.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD802D931E8F4068008132CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD802D941E8F4068008132CF /* DNAssetsViewCell.h */,
+				DD802D951E8F4068008132CF /* DNAssetsViewCell.m */,
+				DD802D961E8F4068008132CF /* DNBadgeLabel.h */,
+				DD802D971E8F4068008132CF /* DNBadgeLabel.m */,
+				DD802D981E8F4068008132CF /* DNBrowserCell.h */,
+				DD802D991E8F4068008132CF /* DNBrowserCell.m */,
+				DD802D9A1E8F4068008132CF /* DNFullImageButton.h */,
+				DD802D9B1E8F4068008132CF /* DNFullImageButton.m */,
+				DD802D9C1E8F4068008132CF /* DNSendButton.h */,
+				DD802D9D1E8F4068008132CF /* DNSendButton.m */,
+				DD802D9E1E8F4068008132CF /* DNUnAuthorizedTipsView.h */,
+				DD802D9F1E8F4068008132CF /* DNUnAuthorizedTipsView.m */,
+				DD802DA01E8F4068008132CF /* JKPromptView.h */,
+				DD802DA11E8F4068008132CF /* JKPromptView.m */,
+				DD802DA21E8F4068008132CF /* MWTapDetectingImageView.h */,
+				DD802DA31E8F4068008132CF /* MWTapDetectingImageView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +244,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = DD802D551E8F3F78008132CF;
 			productRefGroup = DD802D5F1E8F3F78008132CF /* Products */;
@@ -138,8 +261,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD802DB11E8F4068008132CF /* ImagesPicker.xcassets in Resources */,
 				DD802D711E8F3F78008132CF /* LaunchScreen.storyboard in Resources */,
+				DD802DB01E8F4068008132CF /* imageResources.xcassets in Resources */,
+				DD802DAB1E8F4068008132CF /* DNImagePicker.strings in Resources */,
 				DD802D6E1E8F3F78008132CF /* Assets.xcassets in Resources */,
+				DD802DA91E8F4068008132CF /* DNImagePickerController.strings in Resources */,
 				DD802D6C1E8F3F78008132CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,9 +278,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD802DB51E8F4068008132CF /* DNBrowserCell.m in Sources */,
+				DD802DA71E8F4068008132CF /* DNImageFlowViewController.m in Sources */,
+				DD802DB61E8F4068008132CF /* DNFullImageButton.m in Sources */,
+				DD802DAD1E8F4068008132CF /* UIColor+Hex.m in Sources */,
 				DD802D691E8F3F78008132CF /* ViewController.m in Sources */,
+				DD802DA51E8F4068008132CF /* DNAlbumTableViewController.m in Sources */,
+				DD802DB41E8F4068008132CF /* DNBadgeLabel.m in Sources */,
+				DD802DB91E8F4068008132CF /* JKPromptView.m in Sources */,
+				DD802DAF1E8F4068008132CF /* UIViewController+DNImagePicker.m in Sources */,
+				DD802DAA1E8F4068008132CF /* DNPhotoBrowser.m in Sources */,
+				DD802DA81E8F4068008132CF /* DNImagePickerController.m in Sources */,
+				DD802DB71E8F4068008132CF /* DNSendButton.m in Sources */,
+				DD802DB81E8F4068008132CF /* DNUnAuthorizedTipsView.m in Sources */,
+				DD802DBD1E8F4124008132CF /* XDImagePickerManager.m in Sources */,
+				DD802DBA1E8F4068008132CF /* MWTapDetectingImageView.m in Sources */,
+				DD802DAE1E8F4068008132CF /* UIView+DNImagePicker.m in Sources */,
 				DD802D661E8F3F78008132CF /* AppDelegate.m in Sources */,
+				DD802DAC1E8F4068008132CF /* NSURL+DNIMagePickerUrlEqual.m in Sources */,
 				DD802D631E8F3F78008132CF /* main.m in Sources */,
+				DD802DB31E8F4068008132CF /* DNAssetsViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +318,15 @@
 				DD802D701E8F3F78008132CF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DD802D841E8F4068008132CF /* DNImagePicker.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD802D851E8F4068008132CF /* en */,
+				DD802DA41E8F4068008132CF /* zh-Hans */,
+			);
+			name = DNImagePicker.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
