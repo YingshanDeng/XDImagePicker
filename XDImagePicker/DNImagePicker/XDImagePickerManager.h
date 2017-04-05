@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-typedef void (^CompletionBlock)(NSMutableArray *imageAssetArray);
+typedef void (^CompletionBlock)(NSArray *imageURLArray);
 
 @interface XDImagePickerManager : NSObject
 
 + (instancetype)shareInstance;
 
 - (void)showImagePickerFromController:(UIViewController *)fromController
+                         widthOptions:(NSDictionary *)options
                       completionBlock:(CompletionBlock)completionBlock;
-
 @end

@@ -27,7 +27,9 @@
 }
 
 - (void)btnClick:(UIButton *)sender {
-    [[XDImagePickerManager shareInstance] showImagePickerFromController:self completionBlock:^(NSMutableArray *imageAssetArray) {
+    
+    [[XDImagePickerManager shareInstance] showImagePickerFromController:self widthOptions:@{@"quality": @80, @"width": @600} completionBlock:^(NSArray *imageURLArray) {
+        NSLog(@"%@", imageURLArray);
         
     }];
 }
