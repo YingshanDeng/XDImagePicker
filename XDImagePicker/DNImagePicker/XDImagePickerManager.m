@@ -91,7 +91,9 @@
                 self.completionBlock(nil);
                 break;
             } else {
-                [imgURLArray addObject:[[NSURL fileURLWithPath:filePath] absoluteString]];
+                [imgURLArray addObject:@{@"image-path": [[NSURL fileURLWithPath:filePath] absoluteString],
+                                        @"width": [NSNumber numberWithInteger:image.size.width],
+                                        @"height": [NSNumber numberWithInteger:image.size.height]}];
             }
         }
     }

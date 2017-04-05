@@ -41,10 +41,10 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 #pragma mark - mark setup Data and View
 - (void)loadData
 {
-    __weak typeof(self) weakSelf = self;
+    __weak DNAlbumTableViewController *weakSelf = self;
     [self loadAssetsGroupsWithTypes:self.groupTypes completion:^(NSArray *groupAssets)
      {
-         __strong typeof(weakSelf) strongSelf = weakSelf;
+         __strong DNAlbumTableViewController *strongSelf = weakSelf;
          strongSelf.assetsGroups = groupAssets;
          [strongSelf.tableView reloadData];
      }];
@@ -122,7 +122,7 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 {
     DNUnAuthorizedTipsView *view  = [[DNUnAuthorizedTipsView alloc] initWithFrame:self.tableView.frame];
     self.tableView.backgroundView = view;
-//    [self.tableView addSubview:view];
+    //    [self.tableView addSubview:view];
 }
 
 #pragma mark - Table view data source
@@ -176,11 +176,11 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
     __block NSUInteger numberOfFinishedTypes = 0;
     
     for (NSNumber *type in types) {
-        __weak typeof(self) weakSelf = self;
+        __weak DNAlbumTableViewController *weakSelf = self;
         [self.assetsLibrary enumerateGroupsWithTypes:[type unsignedIntegerValue]
                                           usingBlock:^(ALAssetsGroup *assetsGroup, BOOL *stop)
          {
-             __strong typeof(weakSelf) strongSelf = weakSelf;
+             __strong DNAlbumTableViewController *strongSelf = weakSelf;
              if (assetsGroup) {
                  // Filter the assets group
                  [assetsGroup setAssetsFilter:ALAssetsFilterFromDNImagePickerControllerFilterType([[strongSelf dnImagePickerController] filterType])];
@@ -216,7 +216,7 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
                  }
              }
          } failureBlock:^(NSError *error) {
-             __strong typeof(weakSelf) strongSelf = weakSelf;
+             __strong DNAlbumTableViewController *strongSelf = weakSelf;
              if ([ALAssetsLibrary authorizationStatus] != ALAuthorizationStatusAuthorized){
                  [strongSelf showUnAuthorizedTipsView];
              }
