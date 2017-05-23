@@ -75,7 +75,8 @@
     if (!_viewIsActive && [self.navigationController.viewControllers objectAtIndex:0] != self) {
         [self storePreviousNavBarAppearance];
     }
-    [self setNavBarAppearance:animated];
+
+//    [self setNavBarAppearance:animated];
     
     // Initial appearance
     if (!_viewHasAppearedInitially) {
@@ -282,7 +283,7 @@
         _checkButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _checkButton.frame = CGRectMake(0, 0, 25, 25);
         [_checkButton setBackgroundImage:[UIImage imageNamed:@"photo_check_selected"] forState:UIControlStateSelected];
-        [_checkButton setBackgroundImage:[UIImage imageNamed:@"photo_check_default"] forState:UIControlStateNormal];
+        [_checkButton setBackgroundImage:[UIImage imageNamed:@"photo_check_navbar"] forState:UIControlStateNormal];
         [_checkButton addTarget:self action:@selector(checkButtonAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _checkButton;
@@ -316,7 +317,8 @@
             [_toolbar setBackgroundImage:nil forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
             [_toolbar setBackgroundImage:nil forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsLandscapePhone];
         }
-        _toolbar.barStyle = UIBarStyleBlackTranslucent;
+        _toolbar.clipsToBounds = YES;
+        _toolbar.barTintColor = [UIColor whiteColor];
         _toolbar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
         [self.view addSubview:_toolbar];
     }
@@ -332,7 +334,7 @@
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
         _browserCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(-10, 0, self.view.bounds.size.width+20, self.view.bounds.size.height+1) collectionViewLayout:layout];
-        _browserCollectionView.backgroundColor = [UIColor blackColor];
+        _browserCollectionView.backgroundColor = [UIColor whiteColor];
         [_browserCollectionView registerClass:[DNBrowserCell class] forCellWithReuseIdentifier:NSStringFromClass([DNBrowserCell class])];
         _browserCollectionView.delegate = self;
         _browserCollectionView.dataSource = self;

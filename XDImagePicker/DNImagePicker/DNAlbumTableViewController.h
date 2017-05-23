@@ -10,4 +10,6 @@
 
 @interface DNAlbumTableViewController : UITableViewController
 
+- (instancetype)initWithMaximumImagesCount:(NSInteger)maximumImagesCount;
+
 @end

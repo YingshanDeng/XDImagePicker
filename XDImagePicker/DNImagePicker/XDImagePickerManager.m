@@ -17,9 +17,10 @@
 @property(nonatomic, weak) UIViewController *fromController;
 @property(nonatomic, copy) CompletionBlock completionBlock;
 
-@property(nonatomic, assign) NSInteger width;
-@property(nonatomic, assign) NSInteger height;
-@property(nonatomic, assign) NSInteger quality;
+@property(nonatomic, assign) NSInteger width;   // max width to allow the images to be
+@property(nonatomic, assign) NSInteger height;  // max height to allow the images to be
+@property(nonatomic, assign) NSInteger quality; // quality of resized image
+@property(nonatomic, assign) NSInteger maximumImagesCount; // max images to be selected
 
 @end
 
@@ -44,9 +45,10 @@
     self.width = [[options objectForKey:@"width"] integerValue];
     self.height = [[options objectForKey:@"height"] integerValue];
     self.quality = [[options objectForKey:@"quality"] integerValue];
+    self.maximumImagesCount = [[options objectForKey:@"maximumImagesCount"] integerValue];
     
     if ([self isPhotoLibraryAvailable]) {
-        DNImagePickerController *imagePicker = [[DNImagePickerController alloc] init];
+        DNImagePickerController *imagePicker = [[DNImagePickerController alloc] initWithMaximumImagesCount:self.maximumImagesCount];
         imagePicker.imagePickerDelegate = self;
         [self.fromController presentViewController:imagePicker animated:YES completion:nil];
     }

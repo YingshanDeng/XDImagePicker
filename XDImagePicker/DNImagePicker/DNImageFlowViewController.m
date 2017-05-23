@@ -17,8 +17,6 @@
 #import "NSURL+DNIMagePickerUrlEqual.h"
 
 
-static NSUInteger const kDNImageFlowMaxSeletedNumber = 9;
-
 @interface DNImageFlowViewController () <UICollectionViewDataSource, UICollectionViewDelegate, DNAssetsViewCellDelegate, DNPhotoBrowserDelegate>
 
 @property (nonatomic, strong) NSURL *assetsGroupURL;
@@ -33,13 +31,15 @@ static NSUInteger const kDNImageFlowMaxSeletedNumber = 9;
 @property (nonatomic, strong) NSMutableArray *selectedAssetsArray;
 
 @property (nonatomic, assign) BOOL isFullImage;
+
+@property (nonatomic, assign) NSInteger maximumImagesCount; // max images to be selected
 @end
 
 static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 
 @implementation DNImageFlowViewController
 
-- (instancetype)initWithGroupURL:(NSURL *)assetsGroupURL
+- (instancetype)initWithGroupURL:(NSURL *)assetsGroupURL withMaximumImagesCount:(NSInteger)maximumImagesCount
 {
     self = [super init];
     if (self) {
@@ -47,6 +47,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
         _selectedAssetsArray = [NSMutableArray new];
         _assetsGroupURL = assetsGroupURL;
         _assetsLibrary = [[ALAssetsLibrary alloc] init];
+        _maximumImagesCount = maximumImagesCount;
     }
     return self;
 }
@@ -60,6 +61,8 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.navigationController.toolbar.clipsToBounds = YES;
+    self.navigationController.toolbar.barTintColor = [UIColor whiteColor];
     self.navigationController.toolbarHidden = NO;
 }
 
@@ -104,7 +107,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     [self imageFlowCollectionView];
     
     UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTable(@"preview", @"DNImagePicker", @"预览") style:UIBarButtonItemStylePlain target:self action:@selector(previewAction)];
-    [item1 setTintColor:[UIColor blackColor]];
+    [item1 setTintColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0]];
     item1.enabled = NO;
     
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
@@ -205,10 +208,14 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     }
     UIBarButtonItem *firstItem = self.toolbarItems.firstObject;
     firstItem.enabled = YES;
-    if (self.selectedAssetsArray.count >= kDNImageFlowMaxSeletedNumber) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"alertTitle", @"DNImagePicker", nil) message:NSLocalizedStringFromTable(@"alertContent", @"DNImagePicker", nil) delegate:self cancelButtonTitle:NSLocalizedStringFromTable(@"alertButton", @"DNImagePicker", nil) otherButtonTitles:nil, nil];
+    if (self.selectedAssetsArray.count >= self.maximumImagesCount) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"alertTitle", @"DNImagePicker", nil)
+                                                        message:[NSString stringWithFormat:@"不能超过%ld张图片", (long)self.maximumImagesCount]
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedStringFromTable(@"alertButton", @"DNImagePicker", nil)
+                                              otherButtonTitles:nil, nil];
         [alert show];
-        
+       
         return NO;
     }else
     {

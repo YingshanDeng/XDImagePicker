@@ -18,12 +18,23 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 @interface DNAlbumTableViewController ()
 @property (nonatomic, strong) ALAssetsLibrary *assetsLibrary;
 @property (nonatomic, strong) NSArray *groupTypes;
+@property (nonatomic, assign) NSInteger maximumImagesCount; // max images to be selected
+
 
 #pragma mark - dataSources
 @property (nonatomic, strong) NSArray *assetsGroups;
 @end
 
 @implementation DNAlbumTableViewController
+
+- (instancetype)initWithMaximumImagesCount:(NSInteger)maximumImagesCount
+{
+    self = [super init];
+    if (self) {
+        _maximumImagesCount = maximumImagesCount;
+    }
+    return self;
+}
 
 #pragma mark - life cycle
 - (void)viewDidLoad {
@@ -163,7 +174,7 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 {
     ALAssetsGroup *group = self.assetsGroups[indexPath.row];
     NSURL *url = [group valueForProperty:ALAssetsGroupPropertyURL];
-    DNImageFlowViewController *imageFlowViewController = [[DNImageFlowViewController alloc] initWithGroupURL:url];
+    DNImageFlowViewController *imageFlowViewController = [[DNImageFlowViewController alloc] initWithGroupURL:url withMaximumImagesCount:self.maximumImagesCount];
     [self.navigationController pushViewController:imageFlowViewController animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

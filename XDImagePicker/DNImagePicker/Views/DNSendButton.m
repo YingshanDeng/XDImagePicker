@@ -10,7 +10,7 @@
 #import "UIView+DNImagePicker.h"
 #import "UIColor+Hex.h"
 #define kSendButtonFont  [UIFont systemFontOfSize:15]
-static NSString *const dnSendButtonTintNormalColor = @"#1FB823";
+static NSString *const dnSendButtonTintNormalColor = @"#1FB820";
 //static NSString *const dnSendButtonTintAbnormalColor = @"#C9DCCA";
 static NSString *const dnSendButtonTintAbnormalColor = @"#C9EFCA";
 
@@ -45,7 +45,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
 {
     _backGroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
     _backGroudView.centerY = self.centerY;
-    _backGroudView.backgroundColor = [UIColor hexStringToColor:dnSendButtonTintNormalColor];
+    _backGroudView.backgroundColor = [UIColor hexStringToColor:@"#4ad462"];
     _backGroudView.layer.cornerRadius = _backGroudView.height/2;
     [self addSubview:_backGroudView];
     

@@ -33,10 +33,21 @@ ALAssetsFilter * ALAssetsFilterFromDNImagePickerControllerFilterType(DNImagePick
 
 @property (nonatomic, weak) id<UINavigationControllerDelegate> navDelegate;
 @property (nonatomic, assign) BOOL isDuringPushAnimation;
+@property (nonatomic, assign) NSInteger maximumImagesCount; // max images to be selected
 
 @end
 
 @implementation DNImagePickerController
+
+- (instancetype)initWithMaximumImagesCount:(NSInteger)maximumImagesCount
+{
+    self = [super init];
+    if (self) {
+        _maximumImagesCount = maximumImagesCount;
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -64,8 +75,8 @@ ALAssetsFilter * ALAssetsFilterFromDNImagePickerControllerFilterType(DNImagePick
              if ([assetsGroupID isEqualToString:propwetyID]) {
                  *stop = YES;
                  NSURL *assetsGroupURL = [assetsGroup valueForProperty:ALAssetsGroupPropertyURL];
-                 DNAlbumTableViewController *albumTableViewController = [[DNAlbumTableViewController alloc] init];
-                 DNImageFlowViewController *imageFlowController = [[DNImageFlowViewController alloc] initWithGroupURL:assetsGroupURL];
+                 DNAlbumTableViewController *albumTableViewController = [[DNAlbumTableViewController alloc] initWithMaximumImagesCount:self.maximumImagesCount];
+                 DNImageFlowViewController *imageFlowController = [[DNImageFlowViewController alloc] initWithGroupURL:assetsGroupURL withMaximumImagesCount:self.maximumImagesCount];
                  [self setViewControllers:@[albumTableViewController,imageFlowController]];
              }
          }

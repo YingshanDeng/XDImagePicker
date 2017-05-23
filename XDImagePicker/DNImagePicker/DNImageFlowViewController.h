@@ -11,4 +11,7 @@
 @interface DNImageFlowViewController : UIViewController
 
 - (instancetype)initWithGroupURL:(NSURL *)assetsGroupURL;
+
+- (instancetype)initWithGroupURL:(NSURL *)assetsGroupURL
+          withMaximumImagesCount:(NSInteger)maximumImagesCount;
 @end

@@ -28,10 +28,11 @@
 
 - (void)btnClick:(UIButton *)sender {
     
-    [[XDImagePickerManager shareInstance] showImagePickerFromController:self widthOptions:@{@"quality": @80, @"width": @600} completionBlock:^(NSArray *imageURLArray) {
-        NSLog(@"%@", imageURLArray);
-        
-    }];
+    [[XDImagePickerManager shareInstance] showImagePickerFromController:self
+                                                           widthOptions:@{@"quality": @80, @"width": @1024, @"height": @1024, @"maximumImagesCount": @9}
+                                                        completionBlock:^(NSArray *imageURLArray) {
+                                                            NSLog(@"%@", imageURLArray);
+                                                        }];
 }
 
 - (void)didReceiveMemoryWarning {
