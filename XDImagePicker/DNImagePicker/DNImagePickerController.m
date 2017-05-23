@@ -95,7 +95,7 @@ ALAssetsFilter * ALAssetsFilterFromDNImagePickerControllerFilterType(DNImagePick
 #pragma mark - priviate methods
 - (void)showAlbumList
 {
-    DNAlbumTableViewController *albumTableViewController = [[DNAlbumTableViewController alloc] init];
+    DNAlbumTableViewController *albumTableViewController = [[DNAlbumTableViewController alloc] initWithMaximumImagesCount:self.maximumImagesCount];
     [self setViewControllers:@[albumTableViewController]];
 }
 
