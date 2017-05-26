@@ -64,7 +64,7 @@
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:text forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
-    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor hexStringToColor:@"353535"] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor hexStringToColor:@"808080"] forState:UIControlStateHighlighted];
     
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
