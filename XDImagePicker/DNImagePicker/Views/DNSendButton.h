@@ -16,4 +16,6 @@
 
 - (void)addTaget:(id)target action:(SEL)action;
 
+- (void)setButtonEnable:(BOOL)enable;
+
 @end

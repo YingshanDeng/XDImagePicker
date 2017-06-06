@@ -41,6 +41,10 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
     return self;
 }
 
+- (void)setButtonEnable:(BOOL)enable {
+    _sendButton.enabled = enable;
+}
+
 - (void)setupViews
 {
     _backGroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];

@@ -113,6 +113,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     UIBarButtonItem *item3 = [[UIBarButtonItem alloc] initWithCustomView:self.sendButton];
+    [(DNSendButton *)item3.customView setButtonEnable:NO];
     
     UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     item4.width = -10;
@@ -208,6 +209,10 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     }
     UIBarButtonItem *firstItem = self.toolbarItems.firstObject;
     firstItem.enabled = YES;
+    
+    UIBarButtonItem *sendItem = [self.toolbarItems objectAtIndex:2];
+    [(DNSendButton *)sendItem.customView setButtonEnable:YES];
+    
     if (self.selectedAssetsArray.count >= self.maximumImagesCount) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"alertTitle", @"DNImagePicker", nil)
                                                         message:[NSString stringWithFormat:@"不能超过%ld张图片", (long)self.maximumImagesCount]
@@ -217,8 +222,7 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
         [alert show];
        
         return NO;
-    }else
-    {
+    } else {
         [self addAssetsObject:asset];
         self.sendButton.badgeValue = [NSString stringWithFormat:@"%lu",(unsigned long)self.selectedAssetsArray.count];
         return YES;
@@ -232,6 +236,9 @@ static NSString* const dnAssetsViewCellReuseIdentifier = @"DNAssetsViewCell";
     if (self.selectedAssetsArray.count < 1) {
         UIBarButtonItem *firstItem = self.toolbarItems.firstObject;
         firstItem.enabled = NO;
+        
+        UIBarButtonItem *sendItem = [self.toolbarItems objectAtIndex:2];
+        [(DNSendButton *)sendItem.customView setButtonEnable:NO];
     }
 }
 
