@@ -16,10 +16,10 @@
     UIEdgeInsets insets = UIEdgeInsetsZero;
     switch (position) {
         case DNImagePickerNavigationBarPositionLeft:
-            insets = UIEdgeInsetsMake(0, -20, 0, 20);
+            insets = UIEdgeInsetsMake(0, -17, 0, 0);
             break;
         case DNImagePickerNavigationBarPositionRight:
-            insets = UIEdgeInsetsMake(0, 13, 0, -13);
+            insets = UIEdgeInsetsMake(0, 0, 0, -6);
             break;
         default:
             break;
@@ -53,7 +53,7 @@
             insets = UIEdgeInsetsMake(0, -49 + 26, 0, 19);
             break;
         case DNImagePickerNavigationBarPositionRight:
-            insets = UIEdgeInsetsMake(0, 49 - 26, 0, -19);
+            insets = UIEdgeInsetsMake(0, 0, 0, 0);
             break;
         default:
             break;

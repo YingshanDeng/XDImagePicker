@@ -56,7 +56,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
     _badgeValueLabel = [[UILabel alloc] initWithFrame:_backGroudView.frame];
     _badgeValueLabel.backgroundColor = [UIColor clearColor];
     _badgeValueLabel.textColor = [UIColor whiteColor];
-    _badgeValueLabel.font = [UIFont systemFontOfSize:15.0f];
+    _badgeValueLabel.font = [UIFont systemFontOfSize:16.0f];
     _badgeValueLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_badgeValueLabel];
     
@@ -67,7 +67,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
     [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintNormalColor] forState:UIControlStateNormal];
     [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintAbnormalColor] forState:UIControlStateHighlighted];
     [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintAbnormalColor] forState:UIControlStateDisabled];
-    _sendButton.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+    _sendButton.titleLabel.font = [UIFont systemFontOfSize:16.0f];
     _sendButton.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
     _sendButton.backgroundColor = [UIColor clearColor];
     [self addSubview:_sendButton];
