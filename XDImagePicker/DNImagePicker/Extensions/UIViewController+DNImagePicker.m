@@ -53,7 +53,7 @@
             insets = UIEdgeInsetsMake(0, -49 + 26, 0, 19);
             break;
         case DNImagePickerNavigationBarPositionRight:
-            insets = UIEdgeInsetsMake(0, 0, 0, 0);
+            insets = UIEdgeInsetsMake(0, 0, 0, 6);
             break;
         default:
             break;
@@ -64,6 +64,7 @@
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:text forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight; // 右对齐
     [button setTitleColor:[UIColor hexStringToColor:@"353535"] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor hexStringToColor:@"808080"] forState:UIControlStateHighlighted];
     
