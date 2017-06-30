@@ -8,7 +8,6 @@
 
 #import "DNAssetsViewCell.h"
 
-
 @interface DNAssetsViewCell ()
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIButton *checkButton;
@@ -126,7 +125,7 @@
 {
     self.isSelected = seleted;
     self.asset = asset;
-    CGImageRef thumbnailImageRef = [asset thumbnail];
+    CGImageRef thumbnailImageRef = [asset aspectRatioThumbnail];
     if (thumbnailImageRef) {
         self.imageView.image = [UIImage imageWithCGImage:thumbnailImageRef];
     } else {
@@ -186,6 +185,8 @@
     if (_imageView == nil) {
         _imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
         [_imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [_imageView setContentMode:UIViewContentModeScaleAspectFill];
+        [_imageView setClipsToBounds:YES];
         [self addSubview:_imageView];
     }
     return _imageView;

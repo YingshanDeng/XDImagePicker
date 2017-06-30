@@ -12,6 +12,7 @@
 #import "DNImageFlowViewController.h"
 #import "UIViewController+DNImagePicker.h"
 #import "DNUnAuthorizedTipsView.h"
+#import "DNAlbumViewCell.h"
 
 static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewCellReuseIdentifier";
 
@@ -74,7 +75,7 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
                                    text:NSLocalizedStringFromTable(@"cancel", @"DNImagePicker", @"取消")
                                  action:@selector(cancelAction:)];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:dnalbumTableViewCellReuseIdentifier];
+    [self.tableView registerClass:[DNAlbumViewCell class] forCellReuseIdentifier:dnalbumTableViewCellReuseIdentifier];
     UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.tableFooterView = view;
 }
@@ -143,17 +144,19 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:dnalbumTableViewCellReuseIdentifier forIndexPath:indexPath];
+    DNAlbumViewCell *cell = (DNAlbumViewCell *)[tableView dequeueReusableCellWithIdentifier:dnalbumTableViewCellReuseIdentifier forIndexPath:indexPath];
+    
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     ALAssetsGroup *group = self.assetsGroups[indexPath.row];
-    cell.textLabel.attributedText = [self albumTitle:group];
+    cell.albumTextLabel.attributedText = [self albumTitle:group];
     
     //choose the latest pic as poster image
-    __weak UITableViewCell *blockCell = cell;
+    __weak DNAlbumViewCell *blockCell = cell;
     [group enumerateAssetsAtIndexes:[NSIndexSet indexSetWithIndex:group.numberOfAssets-1] options:NSEnumerationConcurrent usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
         if (result) {
             *stop = YES;
-            blockCell.imageView.image = [UIImage imageWithCGImage:result.thumbnail];
+//            blockCell.imageView.image = [UIImage imageWithCGImage:result.thumbnail];
+            blockCell.albumImageView.image = [UIImage imageWithCGImage:result.aspectRatioThumbnail];
         }
     }];
     return cell;
@@ -161,12 +164,12 @@ static NSString* const dnalbumTableViewCellReuseIdentifier = @"dnalbumTableViewC
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 64;
+    return 84;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 64;
+    return 84;
 }
 
 #pragma mark - tableView delegate

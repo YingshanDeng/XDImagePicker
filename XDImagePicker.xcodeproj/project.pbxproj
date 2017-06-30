@@ -33,6 +33,7 @@
 		DD802DB91E8F4068008132CF /* JKPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802DA11E8F4068008132CF /* JKPromptView.m */; };
 		DD802DBA1E8F4068008132CF /* MWTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802DA31E8F4068008132CF /* MWTapDetectingImageView.m */; };
 		DD802DBD1E8F4124008132CF /* XDImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD802DBC1E8F4124008132CF /* XDImagePickerManager.m */; };
+		DDC65A2F1F063BA700DEB653 /* DNAlbumViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC65A2E1F063BA700DEB653 /* DNAlbumViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,8 @@
 		DD802DA41E8F4068008132CF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DNImagePicker.strings"; sourceTree = "<group>"; };
 		DD802DBB1E8F4124008132CF /* XDImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDImagePickerManager.h; sourceTree = "<group>"; };
 		DD802DBC1E8F4124008132CF /* XDImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDImagePickerManager.m; sourceTree = "<group>"; };
+		DDC65A2D1F063BA700DEB653 /* DNAlbumViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNAlbumViewCell.h; sourceTree = "<group>"; };
+		DDC65A2E1F063BA700DEB653 /* DNAlbumViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNAlbumViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 				DD802DA11E8F4068008132CF /* JKPromptView.m */,
 				DD802DA21E8F4068008132CF /* MWTapDetectingImageView.h */,
 				DD802DA31E8F4068008132CF /* MWTapDetectingImageView.m */,
+				DDC65A2D1F063BA700DEB653 /* DNAlbumViewCell.h */,
+				DDC65A2E1F063BA700DEB653 /* DNAlbumViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				DD802DA51E8F4068008132CF /* DNAlbumTableViewController.m in Sources */,
 				DD802DB41E8F4068008132CF /* DNBadgeLabel.m in Sources */,
 				DD802DB91E8F4068008132CF /* JKPromptView.m in Sources */,
+				DDC65A2F1F063BA700DEB653 /* DNAlbumViewCell.m in Sources */,
 				DD802DAF1E8F4068008132CF /* UIViewController+DNImagePicker.m in Sources */,
 				DD802DAA1E8F4068008132CF /* DNPhotoBrowser.m in Sources */,
 				DD802DA81E8F4068008132CF /* DNImagePickerController.m in Sources */,
