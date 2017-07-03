@@ -47,7 +47,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
 
 - (void)setupViews
 {
-    _backGroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    _backGroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 21, 21)];
     _backGroudView.centerY = self.centerY;
     _backGroudView.backgroundColor = [UIColor hexStringToColor:@"#4ad462"];
     _backGroudView.layer.cornerRadius = _backGroudView.height/2;
@@ -68,7 +68,7 @@ static CGFloat const kSendButtonTextWitdh = 38.0f;
     [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintAbnormalColor] forState:UIControlStateHighlighted];
     [_sendButton setTitleColor:[UIColor hexStringToColor:dnSendButtonTintAbnormalColor] forState:UIControlStateDisabled];
     _sendButton.titleLabel.font = [UIFont systemFontOfSize:16.0f];
-    _sendButton.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
+    _sendButton.contentEdgeInsets = UIEdgeInsetsMake(0, 25, 0, 0);
     _sendButton.backgroundColor = [UIColor clearColor];
     [self addSubview:_sendButton];
 }

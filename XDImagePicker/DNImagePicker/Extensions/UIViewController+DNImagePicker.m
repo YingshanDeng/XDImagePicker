@@ -63,7 +63,7 @@
     [button setFrame:CGRectMake(0, 0, 64, 30)];
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:text forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+    button.titleLabel.font = [UIFont systemFontOfSize:16.0f];
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight; // 右对齐
     [button setTitleColor:[UIColor hexStringToColor:@"353535"] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor hexStringToColor:@"808080"] forState:UIControlStateHighlighted];
